@@ -1,0 +1,12 @@
+[project]
+name = "jira-to-harvest"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.60",
+    "python-dotenv>=1.0",
+    "requests>=2.34",
+]
+
+[project.scripts]
+jira-to-harvest = "jira_to_harvest:main"

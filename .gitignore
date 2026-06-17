@@ -1,0 +1,4 @@
+.venv
+.env
+.jira_session.json
+config
