@@ -24,6 +24,10 @@ Set these before running the script (or put them in a `.env` file loaded by your
 |---|---|
 | `HARVEST_TOKEN` | Harvest personal access token |
 | `HARVEST_ACCOUNT_ID` | Harvest account ID (shown on the token page) |
+| `JIRA_HOST` | https://example.com/jira |
+| `HARVEST_API` | https://api.harvestapp.com/v2 | 
+| `HARVEST_USER_AGENT` | JiraToHarvestImport (<your_email_here>) |
+| `DAILY_HOUR_LIMIT` | default 8.0 |
 
 ### Project mapping (`project_mapping.json`)
 
