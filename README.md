@@ -79,8 +79,8 @@ python jira_to_harvest.py 2026-05 --dry-run
 ## How it works
 
 1. Harvest project/task names are resolved to IDs via the Harvest API.
-2. A browser opens to `jira.omgeving.vlaanderen.be` for SSO login. The script polls until authentication completes (up to 2 minutes).
+2. A browser opens to `$JIRA_HOST` for SSO login. The script polls until authentication completes (up to 2 minutes).
 3. All Jira issues with worklogs in the requested month are fetched. Worklogs on public holidays are skipped with an info message.
 4. A holiday entry (8h) is added for each public holiday in the month.
-5. Existing Harvest entries for the month are fetched and the daily total is capped at 8 hours. If new entries would exceed the cap they are scaled proportionally with a warning.
+5. Existing Harvest entries for the month are fetched and the daily total is capped at `$DAILY_LIMIT` hours. If new entries would exceed the cap they are scaled proportionally with a warning.
 6. Entries are printed as a summary table. Without `--dry-run` they are posted to Harvest.
